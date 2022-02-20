@@ -36,7 +36,7 @@ public class Task {
         }
     }
 
-    public ArrayList<double[]> solutionSeparation(int inputType, String filename) throws Exception {
+    public ArrayList<double[]> solutionSeparation(int inputType, String filename) {
         int numberOfSegments;
         switch (inputType) {
             case 1 -> {
@@ -79,9 +79,10 @@ public class Task {
         return answer;
     }
 
-    ArrayList<ArrayList<double[]>> getResults(int inputType, String filename) throws Exception {
+    ArrayList<ArrayList<double[]>> getResults(int inputType, String filename) {
         var segments = this.solutionSeparation(inputType, filename);
         var answer = new ArrayList<ArrayList<double[]>>();
+        answer.add(segments);
         for(double[] segment : segments) {
             var answerForOneSegment = new ArrayList<double[]>();
             answerForOneSegment.add(BisectionMethod.bisectionMethod(segment[0], segment[1], this.inaccuracy, this.function));

@@ -1,8 +1,7 @@
 package NonlinearEquations;
 
 public class ModifiedNewtonMethod {
-    static double[] modifiedNewtonMethod(double leftBound, double rightBound, double inaccuracy, Function function)
-            throws Exception {
+    static double[] modifiedNewtonMethod(double leftBound, double rightBound, double inaccuracy, Function function) {
         double previousSolution;
         if(function.getFuncValue(leftBound) * function.getSecondDerivativeValue(leftBound) > 0) previousSolution = leftBound;
         else previousSolution = rightBound;
