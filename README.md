@@ -4,7 +4,7 @@ Computational workshop tasks from 4th semester of Applied Mathematics and Inform
 + Java 17
 + No math libs
 ## Tasks
-### Non-linear equations
+### 1. Non-linear equations
 Let $F$ be continuous non-linear function of real argument $x\in\mathbb{R}$.
 
 The task is to find every real solution of non-linear equation $F(x)=0$.
@@ -19,3 +19,5 @@ However, the opposite cannot be said to be true: $F(x_0)=0\not\Rightarrow F(a)\c
 Obviously, since this is a numerical method, every root will be approximate. However, you can pass a certain $\varepsilon$ value, where $\varepsilon$ parameter is an absolute error of each root.
 
 Program implements several methods to approximate roots. 
+
+#### Method a
